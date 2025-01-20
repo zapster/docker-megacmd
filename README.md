@@ -20,8 +20,8 @@ We have 2 options:
 ```
 docker run -d --name megacmd --restart always \
     -v /etc/machine-id:/etc/machine-id:ro \
-    -v /opt/MEGA/config:/root/.megaCmd \
-    -v /opt/MEGA/data:/root/MEGA \
+    -v /opt/MEGA/config:/home/mega/.megaCmd \
+    -v /opt/MEGA/data:/home/mega/MEGA \
     ruslanys/megacmd
 ```
 
@@ -29,8 +29,8 @@ docker run -d --name megacmd --restart always \
 
 ```
 docker run -d --name megacmd --restart always \
-    -v /opt/MEGA/config:/root/.megaCmd \
-    -v /opt/MEGA/data:/root/MEGA \
+    -v /opt/MEGA/config:/home/mega/.megaCmd \
+    -v /opt/MEGA/data:/home/mega/MEGA \
     ruslanys/megacmd
 ```
 
@@ -43,5 +43,5 @@ cat /proc/sys/kernel/random/uuid > /etc/machine-id
 
 ```
 docker exec -it megacmd mega-login $username $password
-docker exec -it megacmd mega-sync /root/MEGA /
+docker exec -it megacmd mega-sync /home/mega/MEGA /
 ```

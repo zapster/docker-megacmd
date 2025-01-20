@@ -25,4 +25,9 @@ RUN apt-get update \
 
     && mkdir /root/MEGA
 
+RUN useradd -ms /bin/bash mega
+USER mega
+WORKDIR /home/mega
+RUN mkdir /home/mega/MEGA
+
 ENTRYPOINT ["mega-cmd-server"]
