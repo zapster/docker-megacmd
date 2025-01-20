@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-MAINTAINER Ruslan Molchanov <ruslanys@gmail.com>
+MAINTAINER Josef Eisl <zapster@zapster.cc>
 
 RUN apt-get update \
 
@@ -28,6 +28,6 @@ RUN apt-get update \
 RUN useradd -ms /bin/bash mega
 USER mega
 WORKDIR /home/mega
-RUN mkdir /home/mega/MEGA
+RUN mkdir /home/mega/MEGA && mkdir /home/mega/.megaCmd
 
 ENTRYPOINT ["mega-cmd-server"]
