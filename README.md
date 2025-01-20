@@ -1,6 +1,6 @@
 # MegaCMD Docker image
 
-[![Docker Automated build](https://img.shields.io/docker/automated/ruslanys/megacmd.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/megacmd/) [![Docker Pulls](https://img.shields.io/docker/pulls/ruslanys/megacmd.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/ruslanys/megacmd/)
+[![Docker Automated build](https://img.shields.io/docker/automated/zapster/megacmd.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/zapster/megacmd/) [![Docker Pulls](https://img.shields.io/docker/pulls/zapster/megacmd.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/zapster/megacmd/)
 
 ## How it works
 
@@ -22,7 +22,7 @@ docker run -d --name megacmd --restart always \
     -v /etc/machine-id:/etc/machine-id:ro \
     -v /opt/MEGA/config:/home/mega/.megaCmd \
     -v /opt/MEGA/data:/home/mega/MEGA \
-    ruslanys/megacmd
+    zapster/megacmd
 ```
 
 2. Generate a new UUID for the container.
@@ -31,7 +31,7 @@ docker run -d --name megacmd --restart always \
 docker run -d --name megacmd --restart always \
     -v /opt/MEGA/config:/home/mega/.megaCmd \
     -v /opt/MEGA/data:/home/mega/MEGA \
-    ruslanys/megacmd
+    zapster/megacmd
 ```
 
 ```
