@@ -1,7 +1,5 @@
 # MegaCMD Docker image
 
-[![Docker Automated build](https://img.shields.io/docker/automated/zapster/megacmd.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/zapster/megacmd/) [![Docker Pulls](https://img.shields.io/docker/pulls/zapster/megacmd.svg?style=flat-square&colorB=007EC6)](https://hub.docker.com/r/zapster/megacmd/)
-
 ## How it works
 
 1. Run container with Mega CMD server and mounted configuration and data directories.
